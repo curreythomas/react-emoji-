@@ -3,6 +3,7 @@ import { Route, Link, Switch, NavLink, BrowserRouter } from 'react-router-dom'
 import { map } from 'ramda'
 import Home from './pages/home'
 import About from './pages/about'
+import Show from './pages/show'
 import { connect } from 'react-redux'
 import style from './App.css'
 
@@ -41,14 +42,15 @@ const App = props => {
     <BrowserRouter>
       <div className="avenir flex flex-column ">
         <header className="tracked tc fl w-100 dib bg-near-black yellow ">
-          <div className="animated headShake infinite sunglasses dib mr4" />
+          <div className="animated headShake infinite sunglasses dib f2 mr4" />
           <h1 className="dib">{props.title}</h1>
-          <div className="animated headShake infinite delay sunglasses dib ml4" />
+          <div className="animated headShake infinite delay sunglasses dib f2 ml4" />
         </header>
         <Menu />
         <Route exact path="/" component={Home} />
         <Switch>
           <Route exact path="/about" component={About} />
+          <Route exact path="/:emoji" component={Show} />
         </Switch>
       </div>
     </BrowserRouter>

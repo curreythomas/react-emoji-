@@ -9,7 +9,7 @@ const ResetEmoji = ({ onSubmit }) => {
         onSubmit()
       }}
     >
-      <button className="f6 link dim br3 ph3 pv2 mb2 ml1 dib white bg-black">
+      <button className="f6 link dim br3 ph3 pv2 mb2 ml1 ba b--near-black dib white bg-near-black">
         Reset
       </button>
     </form>
